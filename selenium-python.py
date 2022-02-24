@@ -35,8 +35,8 @@ try:
     # Verify whether the product (iPhone 12) is added to cart
     if item_on_page == item_in_cart:
         # Set the status of test as 'passed' or 'failed' based on the condition; if item is added to cart
-        driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "iPhone 12 has been successfully added to the cart!"}}')
+        driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "Product has been successfully added to the cart!"}}')
 except NoSuchElementException:
-    driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed", "reason": "Some elements failed to load"}}')
+    driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed", "reason": "Failed to add the product."}}')
 # Stop the driver
 driver.quit() 
